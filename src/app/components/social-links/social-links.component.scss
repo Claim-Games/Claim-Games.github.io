@@ -1,0 +1,34 @@
+.share-btn-container{
+    background-color: rgba(252, 252, 252, 0.562);
+    padding: 10px;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.3);
+    vertical-align: bottom;
+}
+.share-btn-container a i{
+    font-size: 32px;
+    padding: 5px;
+}
+.share-btn-container a{
+    margin: 12px 0;
+    transition: 500ms;
+}
+.share-btn-container a:hover{
+    transform: scale(1.2);
+}
+
+.share-btn-container fa-facebook {
+    color: #1877f2;
+}
+
+.share-btn-container fa-twitter {
+    color: #657786;
+}
+.share-btn-container fa-pinterest {
+    color: #e60023;
+}
+.share-btn-container fa-linkedin {
+    color: #0077b5;
+}
+.share-btn-container fa-whatsapp {
+    color: #25d366;
+}

@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    color: lightgray;
+}
+mat-card.mat-card.mat-focus-indicator{
+    height: 100%;
+}
+
+.mat-card{
+    padding-bottom: 107px + 5px !important;
+    position: relative !important;
+    .mat-card-actions{
+        position: absolute;
+        bottom: 15px;
+        left: 16px;
+        right: 20px;
+        width: calc(100% - 16px);
+    }
+}

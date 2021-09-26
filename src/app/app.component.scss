@@ -1,0 +1,42 @@
+.menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1rem;
+
+    mat-icon {
+        margin-right: 8px;
+    }
+}
+
+mat-toolbar {
+    height: 60px;
+    background: #1f2326;
+    color: white;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 280px;
+    border-right: none;
+    background: #1f2326;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+.column-label{
+    margin-right: 8px;
+    font-size: 1rem;
+    text-align: right;
+    margin-left: 35rem;
+}
+
+mat-sidenav-content {
+    height: auto;
+}

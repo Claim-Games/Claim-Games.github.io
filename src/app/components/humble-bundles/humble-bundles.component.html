@@ -1,0 +1,67 @@
+
+<div class="content mat-elevation-z4">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <!--<h1 *ngIf="HumbleBundles.__zone_symbol__value.bundles.books" style="color: black;">Books:</h1>-->
+      <div [fxFlex]="(100/appComponent.gridColumns) + '%'" fxFlex.xs="95%" fxFlex.sm="33%" *ngFor="let book of HumbleBundles.__zone_symbol__value.bundles.books">
+            <mat-card class="mat-elevation-z4 card-container">
+                <mat-card-header>
+                  <mat-card-title>{{book.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-subtitle>
+                    <h2 style="color: black;">Type: Book</h2>
+                    <h4>Deal ends on: {{book.ends_at | date : 'yyyy-MM-dd'}}</h4>
+                </mat-card-subtitle>
+                <mat-card-content>
+                  <h3>{{book.headline}}</h3>
+                  <img mat-card-image src="{{book.thumbnail_url}}">
+                  <p>{{book.description}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button><a href="{{book.url}}" target=”_blank”>Get it NOW!</a></button>
+                  <app-social-links></app-social-links>
+                </mat-card-actions>
+              </mat-card>
+      </div>
+      <!--<h1 *ngIf="HumbleBundles.__zone_symbol__value.bundles.games" style="color: black;">Games:</h1>-->
+      <div [fxFlex]="(100/appComponent.gridColumns) + '%'" fxFlex.xs="95%" fxFlex.sm="33%" *ngFor="let game of HumbleBundles.__zone_symbol__value.bundles.games">
+            <mat-card class="mat-elevation-z4 card-container">
+                <mat-card-header>
+                  <mat-card-title>{{game.name}}</mat-card-title>
+                </mat-card-header>
+                <mat-card-subtitle>
+                    <h2 style="color: black;">Type: Game</h2>
+                    <h4>Deal ends on: {{game.ends_at | date : 'yyyy-MM-dd'}}</h4>
+                </mat-card-subtitle>
+                <mat-card-content>
+                    <h3>{{game.headline}}</h3>
+                    <img mat-card-image src="{{game.thumbnail_url}}">
+                    <p>{{game.description}}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button><a href="{{game.url}}" target=”_blank”>Get it NOW!</a></button>
+                  <app-social-links></app-social-links>
+                </mat-card-actions>
+              </mat-card>
+      </div>
+      <div [fxFlex]="(100/appComponent.gridColumns) + '%'" fxFlex.xs="95%" fxFlex.sm="33%" *ngFor="let software of HumbleBundles.__zone_symbol__value.bundles.software">
+        <mat-card class="mat-elevation-z4 card-container">
+            <mat-card-header>
+              <mat-card-title>{{software.name}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-subtitle>
+                <h2 style="color: black;">Type: Software</h2>
+                <h4>Deal ends on: {{software.ends_at | date : 'yyyy-MM-dd'}}</h4>
+            </mat-card-subtitle>
+            <mat-card-content>
+                <h3>{{software.headline}}</h3>
+                <img mat-card-image src="{{software.thumbnail_url}}">
+                <p>{{software.description}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button><a href="{{software.url}}" target=”_blank”>Get it NOW!</a></button>
+              <app-social-links></app-social-links>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+    </div>
+  </div>

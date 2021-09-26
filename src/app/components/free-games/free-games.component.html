@@ -1,0 +1,22 @@
+<div class="content mat-elevation-z4">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div [fxFlex]="(100/appComponent.gridColumns) + '%'" fxFlex.xs="95%" fxFlex.sm="33%" *ngFor="let game of GamerPowerGames.__zone_symbol__value">
+        <mat-card class="mat-elevation-z4">
+          <mat-card-header>
+            <mat-card-title class="title">{{game.title}}</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="{{game.image}}" class="pintrest-img" >
+          <mat-card-content>
+            <h3><s>{{game.worth}}</s>&nbsp;&nbsp;&nbsp;&nbsp;Get {{game.type}} for {{game.platforms}}&nbsp;&nbsp;&nbsp;&nbsp; </h3>
+            <div>{{game.description}}</div>
+            <br>
+            <p [innerHTML]="game.instructions"></p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button><a class="url" href="{{game.open_giveaway_url}}" target=”_blank”>Get it NOW!</a></button>
+            <app-social-links></app-social-links>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
